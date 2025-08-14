@@ -4,8 +4,27 @@ import styled from 'styled-components';
 const Hero = () => {
   return (
     <Wrapper>
-      <HeroImage src="/images/hero-img.jpg" />
-      <Swoop src="/swoop.svg" />
+      <picture>
+        <source 
+           type="image/avif"
+           srcSet={`
+             /images/hero-img.avif 1x,
+             /images/hero-img@2x.avif 2x,
+             /images/hero-img@3x.avif 3x,
+           `}
+        />
+        <source 
+           type="image/jpeg"
+           srcSet={`
+             /images/hero-img.jpg 1x,
+             /images/hero-img@2x.jpg 2x,
+             /images/hero-img@3x.jpg 3x,
+           `}
+        />
+        <HeroImage alt="An example of the photos listed on 
+        this site (cat with a black background)" src="/images/hero-img.avif" />
+      </picture>
+      <Swoop alt="" src="/swoop.svg" />
     </Wrapper>
   );
 };
