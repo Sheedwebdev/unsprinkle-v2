@@ -40,7 +40,7 @@ const Tag = styled.li`
   padding: 4px 8px;
   background: var(--color-gray-300);
   font-size: 0.875rem;
-  font-weight: 475;
+  font-weight: 750;
   color: var(--color-gray-800);
 `;
 
